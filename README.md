@@ -33,7 +33,7 @@ python script.py
 
 ```
 ─data
-	└─info.csv
+    └─info.csv
     └─short-comments
       └─0.csv
       └─1.csv
