@@ -26,7 +26,11 @@ class get_top10():
             html = self.chrome.page_source.replace('\n', '')
 
             for p in self.p_info:
-                info.append(re.findall(p, html))
+                tmp = re.findall(p, html)
+                if not tmp:
+                    info.append("")
+                for t in tmp:
+                    info.append(t)
             films.append(info)
         if save:
             # write film.csv
@@ -53,7 +57,11 @@ class get_top10():
                 for item in items:
                     com = ['1']
                     for p in self.p_item[1:]:
-                        com.append(re.findall(p, item))
+                        tmp = re.findall(p, item)
+                        if not tmp:
+                            com.append("")
+                        for t in tmp:
+                            com.append(t)
                     coms.append(com)
             #  not seen
             for j in range(0, 200, 20):
@@ -65,7 +73,11 @@ class get_top10():
                 for item in items:
                     com = ['0']
                     for p in self.p_item[1:]:
-                        com.append(re.findall(p, item))
+                        tmp = re.findall(p, item)
+                        if not tmp:
+                            com.append("")
+                        for t in tmp:
+                            com.append(t)
                     coms.append(com)
             film.append(coms)
 
