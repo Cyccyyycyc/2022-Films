@@ -1,2 +1,4 @@
 # 2022-Films
-an analysis of films in 2022
+Social Computing assignment : an analysis of films in 2022
+
+[data source](douban.com)
